@@ -16,7 +16,7 @@ def do_deploy(archive_path):
         arc = archive_path.split("/")
         base = arc[1].strip('.tgz')
         # upload archive
-        put(archive_path, '/tmp')
+        put(archive_path, '/tmp/')
         sudo('mkdir -p /data/web_static/releases/{}'.format(base))
         main = "/data/web_static/releases/{}".format(base)
         # uncompress archive and delete .tgz
